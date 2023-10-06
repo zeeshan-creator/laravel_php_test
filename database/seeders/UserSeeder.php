@@ -17,16 +17,15 @@ class UserSeeder extends Seeder
     {
         $faker = FakerFactory::create();
 
-        // Define an array of timezones
+        // Array of timezones
         $timezones = [
             'America/New_York',
             'Asia/Tokyo',
-            'Asia/Karachi', // Added Pakistan timezone
-            'Asia/Kolkata', // Added India timezone
-            'Asia/Dubai',   // Added UAE timezone
+            'Asia/Karachi',
+            'Asia/Kolkata',
+            'Asia/Dubai',
         ];
 
-        // Generate at least 20 user records with different timezones
         for ($i = 0; $i < 20; $i++) {
             User::create([
                 'name' => $faker->name,
